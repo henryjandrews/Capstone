@@ -18,6 +18,9 @@ $( document ).ready(function() {
 			    $('.item').click(function() {
 			    	var text = $(this).html();
 			    	$('#keyword').val(text);
+			    	if (text == askQuestion){
+			    		window.location.href = 'answerQuestion.html';
+			    	}
 			    })
 
 			});
