@@ -19,13 +19,13 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-<link rel = "import" href = "navigation.html">
 
 </head>
 <body>
 
 <!-- ************** This method loads the navigation and search bar
 for this page -->
+
 
  <nav class="navbar navbar-default">
         <div class="container">
@@ -98,16 +98,11 @@ for this page -->
         
   <div class="input-group input-group-lg">
       <!-- Searhbar-->
-      <input type="text"  id="" = "search" class="form-control" placeholder="Search for..." >
+      <input type="text" value="" placeholder="Search" id="keyword" list="datalist">
+  	    <div id="results">
+  	    </div>
       <!-- End of Searchbar -->
 
-<!-- Submit Button for search bar, it is shown as searchbar -->
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="button">
-            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-        </button>
-      </span>
-<!-- End of search bar -->
 
     </div><!-- /input-group -->
 </div>
