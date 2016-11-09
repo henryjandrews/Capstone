@@ -19,7 +19,7 @@ $( document ).ready(function() {
 			    	var text = $(this).html();
 			    	$('#keyword').val(text);
 			    	if (text == askQuestion){
-			    		window.location.href = 'answerQuestion.html';
+			    		window.location.href = 'askQuestion.html';
 			    	}
 			    })
 
