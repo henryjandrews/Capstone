@@ -13,9 +13,9 @@ function getDbConnection() {
 function serachForKeyword($keyword) {
   
     $db = getDbConnection();
-    $stmt = $db->prepare("SELECT name_en as country FROM `countries` WHERE name_en LIKE ? ORDER BY country");
+    $stmt = $db->prepare("SELECT question_text FROM mydb.question WHERE question_text LIKE ? ORDER BY timeposted");
 
-    $keyword = $keyword . '%';
+    $keyword = '%' . $keyword . '%';
     $stmt->bindParam(1, $keyword, PDO::PARAM_STR, 100);
 
     $isQueryOk = $stmt->execute();
