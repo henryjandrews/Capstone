@@ -9,6 +9,8 @@ $( document ).ready(function() {
 			.done(function( data ) {
 				$('#results').html('');
 				var results = jQuery.parseJSON(data);
+				var askQuestion = "Ask a new question";
+				$('#results').append('<div class="item">' + askQuestion + '</div>');
 				$(results).each(function(key, value) {
 					$('#results').append('<div class="item">' + value + '</div>');
 				})
@@ -16,6 +18,9 @@ $( document ).ready(function() {
 			    $('.item').click(function() {
 			    	var text = $(this).html();
 			    	$('#keyword').val(text);
+			    	if (text == askQuestion){
+			    		window.location.href = 'answerQuestion.html';
+			    	}
 			    })
 
 			});
