@@ -10,7 +10,7 @@ function getDbConnection() {
 }
 
 // This is the 'search' function that will return all possible rows starting with the keyword sent by the user
-function serachForKeyword($keyword) {
+function searchForKeyword($keyword) {
   
     $db = getDbConnection();
     $stmt = $db->prepare("SELECT question_text as timestamp FROM `question` WHERE question_text LIKE ? ORDER BY timestamp LIMIT 10");
@@ -26,6 +26,29 @@ function serachForKeyword($keyword) {
       $results = $stmt->fetchAll(PDO::FETCH_COLUMN);
     } else {
       
+      trigger_error('Error executing statement.', E_USER_ERROR);
+    }
+
+    $db = null; 
+
+    return $results;
+}
+
+// This is the 'askQuestion' function that will add a new question to the DB
+function askQuestion($keyword) {
+  
+    $db = getDbConnection();
+    $stmt = $db->prepare("INSERT INTO `keybank`.`Question` (`QuestionID`,`Question_text`) VALUES (10,?)");
+
+    $stmt->bindParam(1, $keyword, PDO::PARAM_STR, 100);
+
+    $isQueryOk = $stmt->execute();
+    
+    $results = array();
+
+    if ($isQueryOk) {
+      $results = $stmt->fetchAll(PDO::FETCH_COLUMN);
+    } else {
       trigger_error('Error executing statement.', E_USER_ERROR);
     }
 

@@ -17,9 +17,11 @@ $( document ).ready(function() {
 
 			    $('.item').click(function() {
 			    	var text = $(this).html();
-			    	$('#keyword').val(text);
+			    	var question = $('#keyword').val();
 			    	if (text == askQuestion){
-			    		window.location.href = 'askQuestion.html';
+			    		$.get( "php/ask-question.php", { keyword: keyword } )
+			    		$('#keyword').val("");
+			    		$('.searchBar').append('<div class="alert alert-success"><strong>Your Question has been asked!</strong></div>');
 			    	}
 			    })
 

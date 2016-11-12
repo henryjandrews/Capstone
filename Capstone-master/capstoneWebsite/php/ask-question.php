@@ -7,5 +7,5 @@ if (!isset($_GET['keyword'])) {
 }
 
 $keyword = $_GET['keyword'];
-$data = searchForKeyword($keyword);
+$data = askQuestion($keyword);
 echo json_encode($data, JSON_HEX_APOS);
