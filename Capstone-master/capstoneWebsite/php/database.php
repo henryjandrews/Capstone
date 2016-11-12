@@ -13,7 +13,7 @@ function getDbConnection() {
 function searchForKeyword($keyword) {
   
     $db = getDbConnection();
-    $stmt = $db->prepare("SELECT question_text as timestamp FROM `question` WHERE question_text LIKE ? ORDER BY timestamp LIMIT 10");
+    $stmt = $db->prepare("SELECT question_text as text FROM `question` WHERE question_text LIKE ? ORDER BY timestamp LIMIT 10");
 
     $keyword = '%' . $keyword . '%';
     $stmt->bindParam(1, $keyword, PDO::PARAM_STR, 100);
@@ -38,7 +38,7 @@ function searchForKeyword($keyword) {
 function askQuestion($keyword) {
   
     $db = getDbConnection();
-    $stmt = $db->prepare("INSERT INTO `keybank`.`Question` (`QuestionID`,`Question_text`) VALUES (10,?)");
+    $stmt = $db->prepare("INSERT INTO `mydb`.`Question` (`Question_text`) VALUES (?)");
 
     $stmt->bindParam(1, $keyword, PDO::PARAM_STR, 100);
 
