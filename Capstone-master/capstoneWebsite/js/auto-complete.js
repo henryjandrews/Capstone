@@ -20,8 +20,10 @@ $( document ).ready(function() {
 			    	var question = $('#keyword').val();
 			    	if (text == askQuestion){
 			    		$.get( "php/ask-question.php", { keyword: keyword } )
+			    		.done(function() {
 			    		$('#keyword').val("");
 			    		$('.searchBar').append('<div class="alert alert-success"><strong>Your Question has been asked!</strong></div>');
+			    		});
 			    	}
 			    })
 
