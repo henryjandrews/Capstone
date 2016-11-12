@@ -13,7 +13,7 @@ function getDbConnection() {
 function searchForKeyword($keyword) {
   
     $db = getDbConnection();
-    $stmt = $db->prepare("SELECT question_text as text FROM `question` WHERE question_text LIKE ? ORDER BY timestamp LIMIT 10");
+    $stmt = $db->prepare("SELECT `mydb`.`question_text` FROM `mydb`.`question` WHERE `mydb`.`question_text` LIKE ? LIMIT 10");
 
     $keyword = '%' . $keyword . '%';
     $stmt->bindParam(1, $keyword, PDO::PARAM_STR, 100);
