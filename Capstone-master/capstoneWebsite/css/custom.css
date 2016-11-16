@@ -40,6 +40,22 @@
   
 }
 
+.answers-best{
+    padding: 20px 20px  20px 20px ;
+    background-color: lightgreen;
+    margin-bottom:5px;
+      overflow: hidden;
+  
+}
+
+.answers-flagged{
+    padding: 20px 20px  20px 20px ;
+    background-color: magenta;
+    margin-bottom:5px;
+      overflow: hidden;
+  
+}
+
 
 .questions{
     padding:20px 20px  20px 20px ;
