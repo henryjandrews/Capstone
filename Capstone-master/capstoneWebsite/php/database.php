@@ -62,3 +62,40 @@ function askQuestion($keyword) {
     $db = null; 
     return $results;
 }
+
+function getAnswers($qID) {
+    $db = getDbConnection();
+    $stmt = $db->prepare("SELECT `Answer`.`Answer_text` FROM `mydb`.`Answer` JOIN `mydb`.`Has_answer`
+              ON `Answer`.`AnswerID` = `Has_answer`.`AnswerID` WHERE `Has_answer`.`QuestionID` = ? LIMIT 5");
+    $stmt->bindParam(1, $qID, PDO::PARAM_INT);
+
+    $isQueryOk = $stmt->execute();
+
+    $results = array();
+
+    if($isQueryOk) {
+        $results = $stmt->fetchAll(PDO::FETCH_COLUMN);
+    } else {
+        trigger_error('Error executing query: ', E_USER_ERROR);
+    }
+
+    $db = null;
+    return $results;
+}
+
+function postAnswer($qID, $aText) {
+    $db = getDbConnection();
+    $stmt = $db->prepare("START TRANSACTION; INSERT INTO `mydb`.`Answer` VALUES (?); INSERT INTO `mydb.`Has_answer` VALUES (?)");
+    $stmt->bindParam(1, $aText, PDO::PARAM_STR, 100);
+    $stmt->bindParam(2, $qID, PDO::PARAM_INT);
+
+    $isQueryOk = $stmt->execute();
+
+    $db = null;
+
+    if($isQueryOk) {
+        return true;
+    } else {
+        return false;
+    }
+}
