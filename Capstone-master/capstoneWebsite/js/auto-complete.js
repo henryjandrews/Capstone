@@ -9,7 +9,7 @@ $( document ).ready(function() {
 			.done(function( data ) {
 				var in_list = false;
 				$('#results').html('');
-				var askQuestion = "Ask Question: "+$("#keyword").val();
+				var askQuestion = 'Ask New Question: "'+$("#keyword").val()+'"';
 				$('#results').append('<div class="item" style="color:red;">' + askQuestion + '</div>');
 				var results = jQuery.parseJSON(data);
 				$(results).each(function(key, value) {
@@ -29,8 +29,12 @@ $( document ).ready(function() {
 			    		$('.searchBar').append('<div class="alert alert-success fade in"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Your Question has been asked!</strong></div>');
 			    		});
 			    	}
-			    	else if (in_list == true){
+			    	else if (text == askQuestion && in_list == true){
 			    		$('.searchBar').append('<div class="alert alert-warning fade in"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Question already exists</strong></div>');
+			    	}
+			    	else{
+						localStorage.setItem("question", question);	
+						window.location.href = 'answerQuestion.php';		    	
 			    	}
 			    });
 
