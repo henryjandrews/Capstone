@@ -1,5 +1,4 @@
 <?php
-require('constant.php');
 require('database.php');
 
 if (!isset($_GET['keyword'])) {

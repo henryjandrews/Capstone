@@ -1,19 +1,26 @@
 <?php
-
 // We will use PDO to execute database stuff. 
 // This will return the connection to the database and set the parameter
 // to tell PDO to raise errors when something bad happens
 function getDbConnection() {
-  $db = new PDO(DB_DRIVER . ":dbname=" . DB_DATABASE . ";host=" . DB_SERVER . ";charset=utf8", DB_USER, DB_PASSWORD);
-  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
-  return $db;
+$servername = "keybank.cwdefzhbyz8e.us-east-1.rds.amazonaws.com:3307";
+$username = "keybank";
+$password = "liamcse449";
+	try{
+      $db = new PDO("mysql:host=keybank.cwdefzhbyz8e.us-east-1.rds.amazonaws.com:3307;dbname=mydb", "keybank", "liamcse449");
+      $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
+      return $db;
+  	}
+  	catch(PDOException $e){
+  	   echo "getDBConnection failed: " . $e->getMessage();
+  	}
 }
 
 // This is the 'search' function that will return all possible rows starting with the keyword sent by the user
 function searchForKeyword($keyword) {
   
     $db = getDbConnection();
-    $stmt = $db->prepare("SELECT Question_text FROM mydb.question WHERE Question_text LIKE ? LIMIT 10");
+    $stmt = $db->prepare("SELECT Question_text FROM mydb.Question WHERE Question_text LIKE ? LIMIT 10");
 
     $keyword = '%' . $keyword . '%';
     $stmt->bindParam(1, $keyword, PDO::PARAM_STR, 100);
@@ -24,13 +31,13 @@ function searchForKeyword($keyword) {
     
     if ($isQueryOk) {
       $results = $stmt->fetchAll(PDO::FETCH_COLUMN);
+     
     } else {
       
-      trigger_error('Error executing statement.', E_USER_ERROR);
+      trigger_error('Error executing query.', E_USER_ERROR);
     }
 
     $db = null; 
-
     return $results;
 }
 
@@ -53,6 +60,5 @@ function askQuestion($keyword) {
     }
 
     $db = null; 
-
     return $results;
 }
