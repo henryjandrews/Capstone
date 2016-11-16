@@ -2,9 +2,10 @@
 
 #results {
   display: none;
-	width: 204px;
+	width: auto;
 	display: absolute;
 	border: 1px solid #c0c0c0;
+  
 }
 
 #results .item {
