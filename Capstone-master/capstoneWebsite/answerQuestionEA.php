@@ -43,7 +43,6 @@
 
 <!-- The question(user clicked) should be displayed here -->
 <div class = "question">
-<p> Question:  </p>
     </div>
 
     <div class = "answers"> 
@@ -80,8 +79,8 @@
     </script> 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
    
-   
     <script src = "js/custom.js"></script>
+    <script src = "js/answerQuestionEA.js"></script>
    
 </body>
 </html>

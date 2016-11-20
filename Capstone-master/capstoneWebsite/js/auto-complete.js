@@ -29,12 +29,8 @@ $( document ).ready(function() {
 			    		$('.searchBar').append('<div class="alert alert-success fade in"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Your Question has been asked!</strong></div>');
 			    		});
 			    	}
-			    	else if (text == askQuestion && in_list == true){
-			    		$('.searchBar').append('<div class="alert alert-warning fade in"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Question already exists</strong></div>');
-			    	}
-			    	else{
-						localStorage.setItem("question", question);	
-						window.location.href = 'answerQuestion.php';		    	
+			    	else {
+			    		window.location.href = 'answerQuestionEA.php?question='+text;
 			    	}
 			    });
 
