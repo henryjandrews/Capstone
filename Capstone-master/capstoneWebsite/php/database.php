@@ -30,19 +30,16 @@ function searchForKeyword($keyword) {
     $results = array();
 
     if ($isQueryOk) {
-        while($row = ($stmt->fetch(PDO::FETCH_ASSOC))) {
-            $qText = $row['Question_text'];
-            $qID = $row['QuestionID'];
+        $results = $stmt -> fetchAll(PDO::FETCH_ASSOC);
+        $toJSON = json_encode($results);
 
-            $results[] = array('text' => $qText, 'ID' => $qID);
-        }
     } else {
       trigger_error('Error executing query.', E_USER_ERROR);
     }
 
 
     $db = null; 
-    return $results;
+    return $toJSON;
 }
 
 // This is the 'askQuestion' function that will add a new question to the DB
