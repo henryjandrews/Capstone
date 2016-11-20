@@ -20,7 +20,7 @@ $password = "liamcse449";
 function searchForKeyword($keyword) {
   
     $db = getDbConnection();
-    $stmt = $db->prepare("SELECT Question_text FROM mydb.Question WHERE Question_text LIKE ? LIMIT 10");
+    $stmt = $db->prepare("SELECT Question_text, QuestionID FROM mydb.Question WHERE Question_text LIKE ? LIMIT 10");
 
     $keyword = '%' . $keyword . '%';
     $stmt->bindParam(1, $keyword, PDO::PARAM_STR, 100);
@@ -30,10 +30,9 @@ function searchForKeyword($keyword) {
     $results = array();
     
     if ($isQueryOk) {
-      $results = $stmt->fetchAll(PDO::FETCH_COLUMN);
+      $results = $stmt->fetchAll();
      
     } else {
-      
       trigger_error('Error executing query.', E_USER_ERROR);
     }
 
@@ -65,7 +64,7 @@ function askQuestion($keyword) {
 
 function getAnswers($qID) {
     $db = getDbConnection();
-    $stmt = $db->prepare("SELECT `Answer`.`Answer_text` FROM `mydb`.`Answer` JOIN `mydb`.`Has_answer`
+    $stmt = $db->prepare("SELECT `Answer`.`Answer_text`, `Answer`.`Score`, `Answer`.`time` FROM `mydb`.`Answer` JOIN `mydb`.`Has_answer`
               ON `Answer`.`AnswerID` = `Has_answer`.`AnswerID` WHERE `Has_answer`.`QuestionID` = ? LIMIT 5");
     $stmt->bindParam(1, $qID, PDO::PARAM_INT);
 
@@ -74,7 +73,7 @@ function getAnswers($qID) {
     $results = array();
 
     if($isQueryOk) {
-        $results = $stmt->fetchAll(PDO::FETCH_COLUMN);
+        $results = $stmt->fetchAll();
     } else {
         trigger_error('Error executing query: ', E_USER_ERROR);
     }
