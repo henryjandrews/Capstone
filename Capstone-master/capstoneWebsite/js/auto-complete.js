@@ -12,12 +12,14 @@ $( document ).ready(function() {
 				var askQuestion = 'Ask New Question: "'+$("#keyword").val()+'"';
 				$('#results').append('<div class="item" style="color:red;">' + askQuestion + '</div>');
 				var results = jQuery.parseJSON(data);
-				$(results).each(function(key, value) {
-					$('#results').append('<div class="item style="color:black;">' + value + '</div>');
-					if ($("#keyword").val() == value){
+				for(var i = 0; i < results.length; i++){
+					var obj = results[i];
+					console.log[obj];
+					$('#results').append('<div class="item style="color:black;">' + obj.Question_text + '</div>');
+					if ($("#keyword").val() == obj["Question_text"]){
 						in_list = true;
 					}
-				});
+				}
 
 			    $('.item').click(function() {
 			    	var text = $(this).html();
@@ -30,7 +32,7 @@ $( document ).ready(function() {
 			    		});
 			    	}
 			    	else {
-			    		window.location.href = 'answerQuestionEA.php?question='+text;
+			    		window.location.href = 'answerQuestionEA.php?question='+text+"&id="+id;
 			    	}
 			    });
 

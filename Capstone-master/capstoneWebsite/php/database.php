@@ -31,7 +31,6 @@ function searchForKeyword($keyword) {
 
     if ($isQueryOk) {
         $results = $stmt -> fetchAll(PDO::FETCH_ASSOC);
-        $toJSON = json_encode($results);
 
     } else {
       trigger_error('Error executing query.', E_USER_ERROR);
@@ -39,7 +38,7 @@ function searchForKeyword($keyword) {
 
 
     $db = null; 
-    return $toJSON;
+    return $results;
 }
 
 // This is the 'askQuestion' function that will add a new question to the DB
