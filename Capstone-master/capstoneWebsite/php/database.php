@@ -36,8 +36,21 @@ function searchForKeyword($keyword) {
       trigger_error('Error executing query.', E_USER_ERROR);
     }
 
+    $toJSON = array();
+
+    foreach($results as $key => $value) {
+        foreach($value as $k => $v) {
+            if(isset($toJSON[$k])) {
+                $toJson[$k][] = $v;
+            } else {
+                $toJSON[$k] = array();
+                array_push($toJSON[$k], $v);
+            }
+        }
+    }
+
     $db = null; 
-    return $results;
+    return $toJSON;
 }
 
 // This is the 'askQuestion' function that will add a new question to the DB
