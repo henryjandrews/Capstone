@@ -28,29 +28,21 @@ function searchForKeyword($keyword) {
     $isQueryOk = $stmt->execute();
   
     $results = array();
-    
+
     if ($isQueryOk) {
-      $results = $stmt->fetchAll();
-     
+        while($row = ($stmt->fetch(PDO::FETCH_ASSOC))) {
+            $qText = $row['Question_text'];
+            $qID = $row['QuestionID'];
+
+            $results[] = array('text' => $qText, 'ID' => $qID);
+        }
     } else {
       trigger_error('Error executing query.', E_USER_ERROR);
     }
 
-    $toJSON = array();
-
-    foreach($results as $key => $value) {
-        foreach($value as $k => $v) {
-            if(isset($toJSON[$k])) {
-                $toJson[$k][] = $v;
-            } else {
-                $toJSON[$k] = array();
-                array_push($toJSON[$k], $v);
-            }
-        }
-    }
 
     $db = null; 
-    return $toJSON;
+    return $results;
 }
 
 // This is the 'askQuestion' function that will add a new question to the DB
