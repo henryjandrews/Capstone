@@ -85,7 +85,8 @@ function getAnswers($qID) {
 
 function postAnswer($qID, $aText) {
     $db = getDbConnection();
-    $stmt = $db->prepare("START TRANSACTION; INSERT INTO `mydb`.`Answer` VALUES (?); INSERT INTO `mydb.`Has_answer` VALUES (?)");
+    $stmt = $db->prepare("START TRANSACTION; INSERT INTO `mydb`.`Answer` (`Answer_Text`)
+            VALUES (?); INSERT INTO `mydb.`Has_answer` (`QuestionID`, `AnswerID`) VALUES (?, @AnswerID = LAST_INSERT_ID()); COMMIT;");
     $stmt->bindParam(1, $aText, PDO::PARAM_STR, 100);
     $stmt->bindParam(2, $qID, PDO::PARAM_INT);
 
