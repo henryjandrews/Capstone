@@ -12,8 +12,13 @@ $( document ).ready(function() {
 		else{
 			for(var i = 0; i < results.length; i++){
 				var obj = results[i];
-				console.log[obj];
-				$('.forAnswers').append('<div class = "ansView"><div class = "col-xs-2 flag"><?php include("updownVoteFlag.html"); ?></div><div class = "space4answer"><p>'+obj["Answer_text"]+'</p></div></div><div class = "blank"></div>');
+				$('.forAnswers').append(
+					'<div class = "ansView">'+
+						'<div class = "col-xs-2 flag"></div>'+
+						'<div class = "space4answer"><p>'+obj["Answer_text"]+'</p></div>'+
+					'</div>'+
+					'<div class = "blank"></div>'
+				);
 			}
 		}
  	});
