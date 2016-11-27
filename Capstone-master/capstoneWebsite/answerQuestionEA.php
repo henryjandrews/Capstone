@@ -26,9 +26,41 @@
 <div class = "container">
     <div class = "row">
 
-<div class = "col-xs-sm-md-lg-12">
 
-<div class = "ans">
+
+<div class = "ansView">
+
+    <div class = "col-xs-2 flag">
+    <?php include("updownVoteFlag.html"); ?>
+</div>
+
+<div class = "space4answer">
+
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem debitis iure pariatur in ipsam dolorem nulla consectetur officia nisi, magnam soluta aspernatur veritatis ratione accusantium, rerum expedita enim? Nihil, voluptatum. </p>
+    </div>
+   
+</div>
+
+
+<div class = "blank"></div>
+
+<div class = "ansView">
+
+    <div class = "col-xs-2 flag">
+    <?php include("updownVoteFlag.html"); ?>
+</div>
+
+<div class = "space4answer">
+
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem debitis iure pariatur in ipsam dolorem nulla consectetur officia nisi, magnam soluta aspernatur veritatis ratione accusantium, rerum expedita enim? Nihil, voluptatum. </p>
+    </div>
+   
+</div>
+
+
+<div class = "blank"></div>
+
+<div class = "ansView">
 
     <div class = "col-xs-2 flag">
     <?php include("updownVoteFlag.html"); ?>
@@ -47,7 +79,6 @@
 
 
 
-    </div>
 
 
 
@@ -59,11 +90,6 @@
 
 
 
-
-
-
-
-</div>
 
         </div>
         </div>
