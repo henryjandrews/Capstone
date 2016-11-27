@@ -59,4 +59,17 @@ $( document ).ready(function() {
 
 		});
  	});
+ 	$('.submitButton').click(function() {
+			var aText = $('#Anaswer').val();
+			if (aText == ""){
+				$('.question').append('<div class="alert alert-warning fade in"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>You need to include an answer!</strong></div>');
+			}
+			else{
+				$.get( "php/answer-question.php", { qID:qID, aText } )
+				.done(function(data) {
+					console.log(data);
+			    	$('.question').append('<div class="alert alert-success fade in"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Your answer has been submitted!</strong></div>');
+				});
+			}
+		});
 });
