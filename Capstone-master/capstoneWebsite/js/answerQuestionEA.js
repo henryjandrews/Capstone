@@ -16,7 +16,7 @@ $( document ).ready(function() {
 					'<div class = "ansView">'+
 						'<div class = "col-xs-2 flag">'+
 							'<div class = "forVoting">'+
-       							'<div class = "thumbsDown" AnswerID = '+obj["AnswerID"]+'>'+
+       							'<div class = "thumb" AnswerID = '+obj["AnswerID"]+' pos = 1 >'+
 									 '<button type="button" class="btn btn-default" style="border-color:blue" >'+
                             			'<span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span>'+
                         			 '</button>'+
@@ -26,7 +26,7 @@ $( document ).ready(function() {
          						'<div class = "displayScore">'+
          						'<p>'+obj["Score"]+'</p>'+
         						'</div>'+
- 								'<div class = "thumbsDown" AnswerID = '+obj["AnswerID"]+'>'+
+ 								'<div class = "thumb" AnswerID = '+obj["AnswerID"]+' pos = 0 >'+
        						    	'<button type="button" class="btn btn-default" style="border-color:red" >'+
                             		'<span class="glyphicon glyphicon-hand-down" aria-hidden="true"></span>'+
                         			'</button>'+
@@ -39,5 +39,15 @@ $( document ).ready(function() {
 				);
 			}
 		}
+		$('.thumb').click(function() {
+			aID = $(this).attr('AnswerID');
+			pos = $(this).attr('pos');
+			$.get( "php/update-score.php", { pos:pos, aID:aID } )
+			.done(function(data) {
+				console.log(data);
+			    $('.question').append('<div class="alert alert-success fade in"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Your vote has been cast!</strong></div>');
+			});
+
+		});
  	});
 });
