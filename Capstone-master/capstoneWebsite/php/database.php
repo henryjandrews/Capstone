@@ -65,7 +65,7 @@ function askQuestion($keyword) {
 
 function getAnswers($qID) {
     $db = getDbConnection();
-    $stmt = $db->prepare("SELECT `Answer`.`Answer_text`, `Answer`.`Score`, `Answer`.`time` FROM `mydb`.`Answer` JOIN `mydb`.`Has_Answer`
+    $stmt = $db->prepare("SELECT `Answer`.`Answer_text`, `Answer`.`Score`, `Answer`.`time`, `Answer`.`AnswerID` FROM `mydb`.`Answer` JOIN `mydb`.`Has_Answer`
               ON `Answer`.`AnswerID` = `Has_Answer`.`AnswerID` WHERE `Has_Answer`.`QuestionID` = ? LIMIT 5");
     $stmt->bindParam(1, $qID, PDO::PARAM_INT);
 
@@ -86,7 +86,7 @@ function getAnswers($qID) {
 function postAnswer($qID, $aText) {
     $db = getDbConnection();
     $stmt = $db->prepare("START TRANSACTION; INSERT INTO `mydb`.`Answer` (`Answer_Text`)
-            VALUES (?); INSERT INTO `mydb.`Has_answer` (`QuestionID`, `AnswerID`) VALUES (?, @AnswerID = LAST_INSERT_ID()); COMMIT;");
+            VALUES (?); INSERT INTO `mydb.`Has_Answer` (`QuestionID`, `AnswerID`) VALUES (?, @AnswerID = LAST_INSERT_ID()); COMMIT;");
     $stmt->bindParam(1, $aText, PDO::PARAM_STR, 100);
     $stmt->bindParam(2, $qID, PDO::PARAM_INT);
 
@@ -99,4 +99,29 @@ function postAnswer($qID, $aText) {
     } else {
         return false;
     }
+}
+
+function updateScore($pos, $aID) {
+    $db = getDBConnection();
+    $stmt = $db->prepare("UPDATE `mydb`.`Answer` SET ? = ? + 1 WHERE AnswerID = ?");
+    $positive = 'Positive_Score';
+    $negative = 'Negative_Score';
+    if($pos) {
+        $stmt->bindParam(1, $positive, PDO::PARAM_STR, 100);
+        $stmt->bindParam(2, $positive, PDO::PARAM_STR, 100);
+    } else {
+        $stmt->bindParam(1, $negative, PDO::PARAM_STR, 100);
+        $stmt->bindParam(2, $negative, PDO::PARAM_STR, 100);
+    }
+    $stmt->bindParam(3, $aID, PDO::PARAM_INT);
+
+    $isQueryOk = $stmt->execute();
+
+    if($isQueryOk) {
+        return true;
+    } else {
+        return false;
+    }
+
+    $db = null;
 }
