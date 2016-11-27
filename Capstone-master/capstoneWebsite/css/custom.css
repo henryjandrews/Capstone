@@ -55,7 +55,7 @@
   text-align: center;
   padding: 5px;
   color:  #4D1304;
-  
+  font-size: 30px;
 }
 
 
@@ -77,6 +77,7 @@ padding:5px;
   text-align: center;
   padding: 5px;
   color:  #4D1304;
+  font-size: 30px;
 }
 
 
@@ -117,11 +118,15 @@ padding:5px;
   font-size: 25px;
 }
 
-.QANew{
-   padding: 20px;
-  font-size: 25px;
+.ans{
+   padding: 10px;
+  font-size: 20px;
 }
 
+.que{
+    padding: 10px;
+  font-size: 20px;
+}
 .QAFlag{
   padding: 20px;
   font-size: 25px;
@@ -187,10 +192,6 @@ font-size: 5pt;
 font-size: 5pt;
 }
 
-.forAnswers{
-  background-color: lightblue;
-
-}
 
 
 
@@ -198,9 +199,15 @@ font-size: 5pt;
   margin-top: 5px;
   text-align: center;
   height: 20px;
+  
 }
 
 
+.thumbsUp{
+  width: 1px;
+  height: 20px;
+padding: 5px;
+}
 
 .thumbsDown{
   width: 1px;
