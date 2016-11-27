@@ -35,52 +35,47 @@
 
  
  <!-- AREA FOR DISPLAYING QUESTIONS THAT A USER(I) HAVE ANSWERED RECENTLY -->
-  <div class="col-md-4">
-  <div class = "well answers" > 
-      <h4> My Answers, answers that I have been answered </h4> 
-
+  <div class="col-md-6">
+ 
+ <div class = "border">
+ <div class = "title">
+   <h4> Most Popular Question </h4>
+</div>
     
-  <div class = "answers">
-<a link href = "answerPage.php">  What is the customer service number? </a> <!-- The question should go here -->
-<p>  6AM - 7PM </p> <!-- The answer should go here -->
+<div box = "popularQuestion"> <!-- for appending-->
+  <div class = "pQuestions">
+<p>  What is the customer service number? </p> <!-- The question should go here -->
 
-<!-- This method is calling html page updownVoteFlag.html which 
-contains all the symbols(upvote, downvote, flag)-->
-<?php include("updownVoteFlag.html"); ?>
 
 </div> <!-- end of first answer -->
 
+<hr> <!-- using instead of div = blank -->
+
+ <div class = "pQuestions">
+<p>  What is the customer service number? </p> <!-- The question should go here -->
+
+
+</div> <!-- end of first answer -->
 <hr>
+ <div class = "pQuestions">
+<p>  What is the customer service number? </p> <!-- The question should go here -->
 
-  <div class = "answers">
-<a link href = "answerPage.php">  What is the customer service number? </a> 
-<p> 6AM - 7PM </p>
 
-<!-- This method is calling html page updownVoteFlag.html which 
-contains all the symbols(upvote, downvote, flag)-->
-<?php include("updownVoteFlag.html"); ?>
-</div>
+</div> <!-- end of first answer -->
 
-<hr>
 
-  <div class = "answers">
-<a link href = "answerPage.php">  What is the customer service number? </a> 
-<p> A: 6AM - 7PM </p>
-
-<!-- This method is calling html page updownVoteFlag.html which 
-contains all the symbols(upvote, downvote, flag)-->
-<?php include("updownVoteFlag.html"); ?>
-</div>
+</div> 
 
 <hr>
 
-
+  
 <div class = "more">
     <a href = "answers.html"> More answers </a>
     </div>
 
 </div>
 </div>
+
  <!-- END OF MY ANSWERS -->
 
 
@@ -89,85 +84,44 @@ contains all the symbols(upvote, downvote, flag)-->
 <!------------ MY Questions------------------------------>
 
 <!-- THIS METHOD DISPLAYS RECENTLY ASKED QUESTIONS THAT I CAN ANSWER -->
-  <div class="col-md-4"> 
-      <div class = "well questions" >
-      <h4> Questions that I can answer </h4>
-
+  <div class="col-md-6"> 
+    <div class = "border">
+       <div class = "title">
+   <h4> Most Recent Question </h4>
+</div>
+    
+  <div class = "recentQuestions"> <!-- for appending -->
   <div class = "questions">
-  <p> <a link href = "answerQuestion.html">  What is the customer service number? </p>
-  </div>
+<p>  What is the customer service number? </p> <!-- The question should go here -->
 
-  <hr>
 
-<div class = "questions">
-  <p> <a link href = "answerQuestion.html">  What is the customer service number?</p>
-  </div>
+</div> <!-- end of first answer -->
 
 <hr>
+  <div class = "questions">
+<p>  What is the customer service number? </p> <!-- The question should go here -->
 
-<div class = "questions">
-  <p> <a link href = "answerQuestion.html"> What is the customer service number? </p>
-  </div>
 
-  <hr>
+</div> <!-- end of first answer -->
 
+<hr>
+  <div class = "questions">
+<p>  What is the customer service number? </p> <!-- The question should go here -->
+
+
+</div> <!-- end of first answer -->
+</div>
+<hr>
 <div class = "more">
     <a href = "questinons.html"> More questions </a>
     </div>
 
   </div>
 </div> 
+</div>
 <!--End of questions-->
 
 <!-------------------- Challenges and Trending---------------------->
-<div class = "row">
-   
-<div class="col-md-4"> 
-   
-   
-            <div class = "well challengesTrending"> 
-            <div class = "col-xs-12" >
-          
-            <h4> Challenges </h4>
-
-<!-- THE LATEST CHALLENGE QUESITON SHOULD GO HERE -->
-            <div class = "challenges">
-                <p> Complete to get 100points </p>
-                </div>
-
-<!-- end of challenge quesiton -->
-
-<!-- The code to take user to more challenge questions -->
-
-                <div class = "more">
-    <a href = "challenges.html"> More Challenges</a>
-    </div>
-                </div>
-</div>
-<!-- End of more challenge questions -->
-
-
-<!-- PART OF TRENDING QUESTIONS -->
-             <div class = "well challengesTrending">  
-
-
-                <div class = "col-xs-12 trending">
-                    <h4> My Specialization Areas </h4>
-
-
-<!--THE MOST TRENDING QUESTION SHOULD GO HERE -->
-                    <div class = "trending">
-                        <div class = "tags" data-role="tagsinput">
-<span class="badge tag tag-pill tag-default">Interest</span> 
-
-           
-<span class="badge tag tag-pill tag-default">Banking</span> 
-
-
-<span class="badge tag tag-pill tag-default">Locations</span> </div>
-
-
-                        </div>
 
 <!-- END OF TRENDING -->
 
@@ -176,9 +130,6 @@ contains all the symbols(upvote, downvote, flag)-->
 
    
 
-</div>
-
-</div>
 <!----------------------End of Challenges and Trending-------------->
 </div>
 </div>
