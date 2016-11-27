@@ -15,7 +15,7 @@ $( document ).ready(function() {
 				for(var i = 0; i < results.length; i++){
 					var obj = results[i];
 					console.log[obj];
-					$('#results').append('<div class="item" style="color:black;" qid='+obj.QuestionID+'>' + obj.Question_text+'</div>');
+					$('#results').append('<div class="item" style="color:black;" qID='+obj.QuestionID+'>' + obj.Question_text+'</div>');
 				
 					if ($("#keyword").val() == obj["Question_text"]){
 						in_list = true;
@@ -25,7 +25,7 @@ $( document ).ready(function() {
 			    $('.item').click(function() {
 			    	var text = $(this).html();
 			
-			    	id = $(this).attr('qid');
+			    	qID = $(this).attr('qID');
 			    	var question = $('#keyword').val();
 			    	if (text == askQuestion && in_list == false){
 			    		$.post( "php/ask-question.php", { keyword: keyword } )
@@ -35,7 +35,7 @@ $( document ).ready(function() {
 			    		});
 			    	}
 			    	else {
-			    		window.location.href = 'answerQuestionEA.php?question='+text+"&id="+id;
+			    		window.location.href = 'answerQuestionEA.php?question='+text+"&qID="+qID;
 			    	}
 			    });
 

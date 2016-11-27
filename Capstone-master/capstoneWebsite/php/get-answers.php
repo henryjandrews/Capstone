@@ -1,10 +1,10 @@
 <?php
 require('database.php');
 
-if (!isset($_GET['id'])) {
+if (!isset($_GET['qID'])) {
 	die("");
 }
 
-$id = $_GET['id'];
-$data = getAnswers($id);
+$qID = $_GET['qID'];
+$data = getAnswers($qID);
 echo json_encode($data, JSON_HEX_APOS);

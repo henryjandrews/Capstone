@@ -27,7 +27,7 @@
     <div class = "row">
     <div class = "question">
     </div>
-		<div class = "forAnswers" onload="getAnswers" src="js/answerQuestionEA.js">
+		<div class = "forAnswers">
 		</div>
 	</div>
 </div>
