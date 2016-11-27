@@ -26,12 +26,8 @@
 <div class = "container">
     <div class = "row">
 
-    <div class = "nameoftheQuestion">
     <div class = "question">
     </div>
-    </div>
-
-    <div class 
 
 		<div class = "forAnswers">
 		</div>
