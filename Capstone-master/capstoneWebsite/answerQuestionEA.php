@@ -25,10 +25,13 @@
 
 <div class = "container">
     <div class = "row">
+    <div class = "question">
+    </div>
 		<div class = "forAnswers" onload="getAnswers" src="js/answerQuestionEA.js">
 		</div>
 	</div>
 </div>
+
 
     <!-- End of serachbar -------->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
