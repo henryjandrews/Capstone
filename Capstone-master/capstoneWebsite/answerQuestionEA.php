@@ -29,10 +29,27 @@
     <div class = "question">
     </div>
 
+
+
 		<div class = "forAnswers">
 		</div>
 	</div>
 </div>
+
+<div class="form-group">
+  <label for="Answer">Add a new  and improved answer:</label>
+
+  <!-- Text area for enter the question -->
+  <textarea class="form-control" rows="10" id="Anaswer"></textarea>
+</div>
+<!-- End of form-group class -->
+
+
+<!-- Submitting the answer -->
+<div class =  "submitButton">
+     <input type="submit" class="btn btn-info" value="Your Answer">
+</div>
+
 
 
     <!-- End of serachbar -------->
@@ -42,8 +59,7 @@
     </script> 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
      
-    <script src="js/bootstrap.min.js">
-    </script>
+  
     <script src = "js/custom.js"></script>
     <script src="js/answerQuestionEA.js"></script>
       <script src="js/auto-complete.js"></script>
