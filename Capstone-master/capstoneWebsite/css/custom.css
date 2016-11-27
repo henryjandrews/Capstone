@@ -198,17 +198,12 @@ font-size: 5pt;
 }
 
 
-.thumbsUp{
+.thumb{
   width: 1px;
   height: 20px;
 padding: 5px;
 }
 
-.thumbsDown{
-  width: 1px;
-  height: 20px;
-padding: 5px;
-}
 
 .forVoting{
   width:30px;

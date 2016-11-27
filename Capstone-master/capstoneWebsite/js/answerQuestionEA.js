@@ -42,11 +42,20 @@ $( document ).ready(function() {
 		$('.thumb').click(function() {
 			aID = $(this).attr('AnswerID');
 			pos = $(this).attr('pos');
-			$.get( "php/update-score.php", { pos:pos, aID:aID } )
-			.done(function(data) {
-				console.log(data);
-			    $('.question').append('<div class="alert alert-success fade in"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Your vote has been cast!</strong></div>');
-			});
+			if (pos==1){
+				$.get( "php/positive-Score.php", { aID:aID } )
+				.done(function(data) {
+					console.log(data);
+			    	$('.question').append('<div class="alert alert-success fade in"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Your up-vote has been cast!</strong></div>');
+				});
+			}
+			else if (pos==0){
+				$.get( "php/negative-Score.php", { aID:aID } )
+				.done(function(data) {
+					console.log(data);
+			    	$('.question').append('<div class="alert alert-success fade in"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Your down-vote has been cast!</strong></div>');
+				});
+			}
 
 		});
  	});

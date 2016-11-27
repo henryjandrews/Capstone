@@ -101,7 +101,7 @@ function postAnswer($qID, $aText) {
     }
 }
 
-function positiveScore($pos, $aID) {
+function positiveScore($aID) {
     $db = getDBConnection();
     $stmt = $db->prepare("UPDATE `mydb`.`Answer` SET `Answer`.`Positive_Score` = `Answer`.`Positive_Score` + 1 WHERE AnswerID = ?");
     $stmt->bindParam(1, $aID, PDO::PARAM_INT);
