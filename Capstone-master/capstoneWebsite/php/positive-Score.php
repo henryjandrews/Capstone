@@ -6,4 +6,4 @@ if (!isset($_GET['aID'])) {
 }
 
 $aID = $_GET['aID'];
-echo positive-Score($aID);
+echo positiveScore($aID);

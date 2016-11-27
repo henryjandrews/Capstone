@@ -6,4 +6,4 @@ if (!isset($_GET['aID'])) {
 }
 
 $aID = $_GET['aID'];
-echo negative-Score($aID);
+echo negativeScore($aID);
