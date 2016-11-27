@@ -28,49 +28,58 @@
     font-size: 2em;
 }
 
+.navbar{
+  background-color: red;
+
+}
+.color{
+  background-color: white;
+}
+
+
+
 .searchBar{
  padding: 20px 20px;
 }
 
 .answers{
     padding: 20px 20px  20px 20px ;
-    background-color: lightcyan;
+   background-color:#EFEBEA;
     margin-bottom:5px;
-      overflow: hidden;
+     overflow: hidden;
+
   
 }
 
-.answers-best{
-    padding: 20px 20px  20px 20px ;
-    background-color: lightgreen;
-    margin-bottom:5px;
-      overflow: hidden;
+.answers h4{
+  text-align: center;
+  padding: 5px;
+  color:  #4D1304;
   
 }
 
-.answers-flagged{
-    padding: 20px 20px  20px 20px ;
-    background-color: magenta;
-    margin-bottom:5px;
-      overflow: hidden;
-  
-}
 
+
+.blank{
+ 
+padding:5px;
+ 
+}
 
 .questions{
     padding:20px 20px  20px 20px ;
-    background-color: lightcyan;
+    background-color: #EFEBEA;
     
       overflow: hidden;
 }
 
-.challengesTrending{
-   padding:20px 20px  20px 20px ;
-    background-color: lightcyan;
-    
-      overflow: hidden;
-
+.questions h4{
+  text-align: center;
+  padding: 5px;
+  color:  #4D1304;
 }
+
+
 
 
 .more{
@@ -178,3 +187,45 @@ font-size: 5pt;
 font-size: 5pt;
 }
 
+.forAnswers{
+  background-color: lightblue;
+
+}
+
+
+
+.displayScore{
+  margin-top: 5px;
+  text-align: center;
+  height: 20px;
+}
+
+
+
+.thumbsDown{
+  width: 1px;
+  height: 20px;
+padding: 5px;
+}
+
+.forVoting{
+  width:30px;
+  height: 60px;
+  float: left;
+}
+
+
+
+.space4answer{
+  width: auto;
+  position: relative;
+  top: 30px;
+  
+}
+
+
+.ansView{
+  border: 1px solid green;
+  width: auto;
+  height: 100px;
+}
