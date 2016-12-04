@@ -59,6 +59,7 @@ $( document ).ready(function() {
 				$.get( "php/positive-Score.php", { aID:aID } )
 				.done(function(data) {
 					console.log(data);
+					location.reload();
 			    	$('.question').append('<div class="alert alert-success fade in"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Your up-vote has been cast!</strong></div>');
 				});
 			}
@@ -66,6 +67,7 @@ $( document ).ready(function() {
 				$.get( "php/negative-Score.php", { aID:aID } )
 				.done(function(data) {
 					console.log(data);
+					location.reload();
 			    	$('.question').append('<div class="alert alert-success fade in"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Your down-vote has been cast!</strong></div>');
 				});
 			}
