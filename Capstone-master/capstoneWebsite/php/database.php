@@ -134,3 +134,45 @@ function negativeScore($aID) {
 
     $db = null;
 }
+
+function getPopularQuestions() {
+    $db = getDbConnection();
+    $stmt = $db->prepare("SELECT Question.Question_text, Question.QuestionID FROM mydb.Question 
+	JOIN mydb.Has_Answer ON Question.QuestionID = Has_Answer.QuestionID 
+    GROUP BY Question.QuestionID ORDER BY COUNT(Has_Answer.AnswerID) DESC LIMIT 5;");
+
+    $isQueryOk = $stmt->execute();
+
+    $results = array();
+
+    if ($isQueryOk) {
+        $results = $stmt -> fetchAll(PDO::FETCH_ASSOC);
+
+    } else {
+        trigger_error('Error executing query.', E_USER_ERROR);
+    }
+
+
+    $db = null;
+    return $results;
+}
+
+function getRecentQuestions() {
+    $db = getDbConnection();
+    $stmt = $db->prepare("SELECT Question.Question_text, Question.QuestionID, Question.timeposted FROM mydb.Question ORDER BY Question.timeposted DESC LIMIT 5;");
+
+    $isQueryOk = $stmt->execute();
+
+    $results = array();
+
+    if ($isQueryOk) {
+        $results = $stmt -> fetchAll(PDO::FETCH_ASSOC);
+
+    } else {
+        trigger_error('Error executing query.', E_USER_ERROR);
+    }
+
+
+    $db = null;
+    return $results;
+}
