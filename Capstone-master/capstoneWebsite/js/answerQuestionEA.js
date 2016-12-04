@@ -17,8 +17,8 @@ $( document ).ready(function() {
 						'<div class = "col-xs-2 flag">'+
 							'<div class = "forVoting">'+
        							'<div class = "thumb" AnswerID = '+obj["AnswerID"]+' pos = 1 >'+
-									 '<button type="button" class="btn btn-default" style="border-color:blue" >'+
-                            			'<span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span>'+
+									 '<button type="button" class="btn btn-default">'+
+                            			'<span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>'+
                         			 '</button>'+
         						'</div>'+
 
@@ -27,15 +27,28 @@ $( document ).ready(function() {
          						'<p>'+obj["Score"]+'</p>'+
         						'</div>'+
  								'<div class = "thumb" AnswerID = '+obj["AnswerID"]+' pos = 0 >'+
-       						    	'<button type="button" class="btn btn-default" style="border-color:red" >'+
-                            		'<span class="glyphicon glyphicon-hand-down" aria-hidden="true"></span>'+
+       						    	'<button type="button" class="btn btn-default" >'+
+                            		'<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>'+
                         			'</button>'+
         						'</div>'+
 							'</div>'+
 						'</div>'+
 						'<div class = "space4answer"><p>'+obj["Answer_text"]+'</p></div>'+
-					'</div>'+
-					'<div class = "blank"></div>'
+					'</div>'+   
+					/*
+					This is where the question information similar to person who asked the question and time will go.
+					*/
+					  '<div class = "answerInfo">'+
+          
+          			 ' <p class="question-info">'+
+					         		
+      		'<span class="glyphicon glyphicon-user" aria-hidden="true"></span>'+
+
+    		'<span class="person">Chris Rice</span>'+
+  			 ' <span class="date-time-display">12/1/2016 1:23pm</span>'+
+ 			' </p>'+
+          '</div>'+
+			'<hr>'
 				);
 			}
 		}
