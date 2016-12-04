@@ -66,7 +66,7 @@ function askQuestion($keyword) {
 function getAnswers($qID) {
     $db = getDbConnection();
     $stmt = $db->prepare("SELECT `Answer`.`Answer_text`, `Answer`.`Score`, `Answer`.`time`, `Answer`.`AnswerID` FROM `mydb`.`Answer` JOIN `mydb`.`Has_Answer`
-              ON `Answer`.`AnswerID` = `Has_Answer`.`AnswerID` WHERE `Has_Answer`.`QuestionID` = ? LIMIT 5");
+              ON `Answer`.`AnswerID` = `Has_Answer`.`AnswerID` WHERE `Has_Answer`.`QuestionID` = ? ORDER BY `score` DESC");
     $stmt->bindParam(1, $qID, PDO::PARAM_INT);
 
     $isQueryOk = $stmt->execute();
