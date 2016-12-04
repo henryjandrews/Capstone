@@ -26,15 +26,33 @@
 <div class = "container">
     <div class = "row">
 
-    <div class = "question">
-    </div>
+<div class = "nameoftheQuestion question-display">
+  <h2 class="question"></h2>
+  <p class="question-info">
+         		<span class="glyphicon glyphicon-user" aria-hidden="false"></span>
 
+    <span class="person">Chris Rice</span>
+    <span class="date-time-display">12/1/2016 1:23pm</span>
+  </p>
+</div>
 
+<div class = "blank"></div>
 
-		<div class = "forAnswers">
+		<div class = "forAnswers ">
+
+<!-- This for adding information like who asked the question and who answered the question -->
+      
+   
 		</div>
+ 
+
+
 	</div>
 </div>
+
+<div class = "answerBox">
+
+  <div class = "col-sm-md-8">
 
 <div class="form-group">
   <label for="Answer">Add a new  and improved answer:</label>
@@ -44,6 +62,8 @@
 </div>
 <!-- End of form-group class -->
 
+</div>
+</div>
 
 <!-- Submitting the answer -->
 <div class =  "submitButton">

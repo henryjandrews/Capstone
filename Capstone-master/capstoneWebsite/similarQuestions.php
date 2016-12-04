@@ -1,8 +1,3 @@
-
-<!--THIS IS THE MAIN PAGE -->
-
-
-<!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -34,7 +29,7 @@
 <div class="row">
 
  
-  <div class="col-md-6">
+
 
    
  <div class = "title">
@@ -79,74 +74,10 @@
 <hr>
 </div>
 
-
-
-
-
-  
-<div class = "more">
-    <a href = "answers.html"> More answers </a>
-    </div>
-
-
-</div>
-
- <!-- END OF MY ANSWERS -->
-
-
-<!------------------------------------------------------------------------>
-
-<!------------ MY Questions------------------------------>
-
-<!-- THIS METHOD DISPLAYS RECENTLY ASKED QUESTIONS THAT I CAN ANSWER -->
-  <div class="col-md-6"> 
-    
-       <div class = "title">
-   <h4> Most Recent Question </h4>
-</div>
-    
-  
-  <div box = "recentQuestions"> <!-- for appending-->
-  
-<a href="#" class="question-display">
-  <h4>What is the current interest rate for an auto loan?</h4>
-  <p class="question-info">
-      		<span class="glyphicon glyphicon-user" aria-hidden="false"></span>
-
-    <span class="person">Chris Rice</span>
-    <span class="date-time-display">12/1/2016 1:23pm</span>
-  </p>
-</a>
-<hr>
-<a href="#" class="question-display">
-  <h4>What is the current interest rate for an auto loan?</h4>
-  <p class="question-info">
-  		<span class="glyphicon glyphicon-user" aria-hidden="false"></span>
-
-    <span class="person">Chris Rice</span>
-    <span class="date-time-display">12/1/2016 1:23pm</span>
-  </p>
-</a>
-<hr>
-
-</div> 
-<div class = "more">
-    <a href = "answers.html"> More Questions </a>
-    </div>
-
-  </div>
-
-</div>
-<!--End of questions-->
-
-
-      
 </div>
 </div>
-</div> <!-- end of container method -->
-<!--- end of content area>
-    <!-- End of serachbar -------->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+</div>
+
     <script src=
     "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
     </script> 
