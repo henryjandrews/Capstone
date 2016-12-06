@@ -52,7 +52,7 @@
 
   
 <div class = "more">
-    <a href = "answers.html"> More answers </a>
+    <a href = "similarQuestions.php"> More Questions </a>
     </div>
 
 
@@ -61,9 +61,6 @@
  <!-- END OF MY ANSWERS -->
 
 
-<!------------------------------------------------------------------------>
-
-<!------------ MY Questions------------------------------>
 
 <!-- THIS METHOD DISPLAYS RECENTLY ASKED QUESTIONS THAT I CAN ANSWER -->
   <div class="col-md-6"> 
@@ -98,7 +95,7 @@
 
 </div> 
 <div class = "more">
-    <a href = "answers.html"> More Questions </a>
+    <a href = "similarQuestions.php"> More Questions </a>
     </div>
 
   </div>

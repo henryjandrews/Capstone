@@ -24,7 +24,7 @@
 }
 
 .keySight{
-    color: red;
+    color: white;
     font-size: 2em;
 }
 
@@ -298,4 +298,8 @@ display: block;
 .user{
   text-align: left;
   font-size: 25px;
+}
+
+.navbar-default{
+  background-color: red;
 }

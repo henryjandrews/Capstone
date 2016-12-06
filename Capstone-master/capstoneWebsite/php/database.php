@@ -137,7 +137,7 @@ function negativeScore($aID) {
 
 function getPopularQuestions() {
     $db = getDbConnection();
-    $stmt = $db->prepare("SELECT Question.Question_text, Question.QuestionID FROM mydb.Question 
+    $stmt = $db->prepare("SELECT Question.Question_text, Question.QuestionID, Question.timeposted FROM mydb.Question 
 	JOIN mydb.Has_Answer ON Question.QuestionID = Has_Answer.QuestionID 
     GROUP BY Question.QuestionID ORDER BY COUNT(Has_Answer.AnswerID) DESC LIMIT 5;");
 
@@ -159,7 +159,8 @@ function getPopularQuestions() {
 
 function getRecentQuestions() {
     $db = getDbConnection();
-    $stmt = $db->prepare("SELECT Question.Question_text, Question.QuestionID, Question.timeposted FROM mydb.Question ORDER BY Question.timeposted DESC LIMIT 5;");
+    $stmt = $db->prepare("SELECT Question.Question_text, Question.QuestionID, Question.timeposted 
+    FROM mydb.Question ORDER BY Question.timeposted DESC LIMIT 5;");
 
     $isQueryOk = $stmt->execute();
 
