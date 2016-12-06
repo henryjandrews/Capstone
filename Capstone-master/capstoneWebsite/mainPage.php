@@ -44,39 +44,6 @@
 <!-- Question 1 -->
 <!-- This should be a loop that shows the three most popular questions from the database -->
 <div class = "popularQuestion"> <!-- for appending -->
-
-<a href="#" class="question-display">
-  <h4>What is the current interest rate for an auto loan?</h4>
-  <p class="question-info">
-  		<span class="glyphicon glyphicon-user" aria-hidden="false"></span>
-    <span class="person">Chris Rice</span>
-    <span class="date-time-display">12/1/2016 1:23pm</span>
-  </p>
-</a>
-<hr>
-
-<!-- Question 2 , used only for sample... erase when this is plugged ito the database-->
-<a href="#" class="question-display">
-  <h4>What is the current interest rate for an auto loan?</h4>
-  <p class="question-info">
-      		<span class="glyphicon glyphicon-user" aria-hidden="false"></span>
-    <span class="person">Chris Rice</span>
-    <span class="date-time-display">12/1/2016 1:23pm</span>
-  </p>
-</a>
-<hr>
-
-
-<!-- Question 3, used only for sample... erase when this is plugged ito the database-->
-<a href="#" class="question-display">
-  <h4>What is the current interest rate for an auto loan?</h4>
-  <p class="question-info">
-      		<span class="glyphicon glyphicon-user" aria-hidden="false"></span>
-    <span class="person">Chris Rice</span>
-    <span class="date-time-display">12/1/2016 1:23pm</span>
-  </p>
-</a>
-<hr>
 </div>
 
 
@@ -155,6 +122,8 @@
     
     <script src = "js/custom.js"></script>
    
-      <script src="js/auto-complete.js"></script>
+    <script src= "js/auto-complete.js"></script>
+      
+    <script src= "js/mainPage.js"></script>
 </body>
 </html>

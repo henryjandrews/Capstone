@@ -24,18 +24,16 @@ $( document ).ready(function() {
 
 			    $('.item').click(function() {
 			    	var text = $(this).html();
-			
 			    	qID = $(this).attr('qID');
-			    	var question = $('#keyword').val();
 			    	if (text == askQuestion && in_list == false){
 			    		$.post( "php/ask-question.php", { keyword: keyword } )
 			    		.done(function() {
-			    		$('#keyword').val("");
-			    		$('.searchBar').append('<div class="alert alert-success fade in"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Your Question has been asked!</strong></div>');
+			    			$('#keyword').val("");
+			    			$('.searchBar').append('<div class="alert alert-success fade in"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Your Question has been asked!</strong></div>');
 			    		});
 			    	}
 			    	else {
-			    		window.location.href = 'answerQuestionEA.php?question='+text+"&qID="+qID;
+			    		window.location.href = 'answerQuestionEA.php?question='+text+'&qID='+qID;
 			    	}
 			    });
 
