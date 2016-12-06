@@ -94,9 +94,6 @@
  <!-- END OF MY ANSWERS -->
 
 
-<!------------------------------------------------------------------------>
-
-<!------------ MY Questions------------------------------>
 
 <!-- THIS METHOD DISPLAYS RECENTLY ASKED QUESTIONS THAT I CAN ANSWER -->
   <div class="col-md-6"> 

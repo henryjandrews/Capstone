@@ -1,5 +1,5 @@
 
-<!--THIS IS THE MAIN PAGE -->
+<!--THIS PAGE DISPALYS THE RESULTS OF QUERIES -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,28 +21,27 @@
 
 
 <body>
+<!-- calling navigaiton bar -->
  <?php include("nav.html"); ?>
 
 <div class = "container">
     <div class = "row">
 
+<!-- The query result/ name of the question is dislapyer here -->
 <div class = "nameoftheQuestion question-display">
   <h2 class="question"></h2>
   <p class="question-info">
          		<span class="glyphicon glyphicon-user" aria-hidden="false"></span>
-
     <span class="person">Chris Rice</span>
     <span class="date-time-display">12/1/2016 1:23pm</span>
   </p>
 </div>
 
+<!-- adding padding between question and answers -->
 <div class = "blank"></div>
 
+<!-- The answer of each question is displayed here -->
 		<div class = "forAnswers ">
-
-<!-- This for adding information like who asked the question and who answered the question -->
-      
-   
 		</div>
  
 
@@ -50,6 +49,7 @@
 	</div>
 </div>
 
+<!-- This is where a input an answer for already answered or non-answerd question -->
 <div class = "answerBox">
 
   <div class = "col-sm-md-8">
