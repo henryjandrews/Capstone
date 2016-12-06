@@ -136,11 +136,12 @@ function negativeScore($aID) {
     $db = null;
 }
 
-function getPopularQuestions() {
+function getPopularQuestions($howMany) {
     $db = getDbConnection();
     $stmt = $db->prepare("SELECT Question.Question_text, Question.QuestionID, Question.timeposted FROM mydb.Question 
 	JOIN mydb.Has_Answer ON Question.QuestionID = Has_Answer.QuestionID 
-    GROUP BY Question.QuestionID ORDER BY COUNT(Has_Answer.AnswerID) DESC LIMIT 5;");
+    GROUP BY Question.QuestionID ORDER BY COUNT(Has_Answer.AnswerID) DESC LIMIT ?;");
+    $stmt->bindParam(1, $howMany, PDO::PARAM_INT);
 
     $isQueryOk = $stmt->execute();
 
@@ -158,10 +159,11 @@ function getPopularQuestions() {
     return $results;
 }
 
-function getRecentQuestions() {
+function getRecentQuestions($howMany) {
     $db = getDbConnection();
     $stmt = $db->prepare("SELECT Question.Question_text, Question.QuestionID, Question.timeposted 
-    FROM mydb.Question ORDER BY Question.timeposted DESC LIMIT 5;");
+    FROM mydb.Question ORDER BY Question.timeposted DESC LIMIT ?;");
+    $stmt->bindParam(1, $howMany, PDO::PARAM_INT);
 
     $isQueryOk = $stmt->execute();
 
