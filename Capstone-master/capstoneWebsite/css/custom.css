@@ -1,5 +1,8 @@
 
-
+/*
+The results method display result in a drop down box after a user 
+enters the question
+*/
 #results {
   display: none;
 	width: auto;
@@ -23,8 +26,11 @@
 	cursor: pointer;
 }
 
+/*
+These two methods change the color of navbar along with the name */
+
 .keySight{
-    color: white;
+    color: red;
     font-size: 2em;
 }
 
@@ -32,25 +38,16 @@
   background-color: red;
 
 }
-.color{
-  background-color: white;
-}
 
 
 
+/* padding for the searchbar */
 .searchBar{
  padding: 20px 20px;
 }
 
-.pQuestions{
-    padding: 20px 20px  20px 20px ;
-   background-color:#EFEBEA;
-    margin-bottom:5px;
-     overflow: hidden;
-     border: 1px solid red;
-
-  
-}
+/*
+Styling the titles of the main page */
 
 .title h4{
   text-align: center;
@@ -60,28 +57,20 @@
 }
 
 
-
+/*
+adding blank spaces and padding in the code when necessary
+*/
 .blank{
- 
 padding:5px;
- 
 }
-
-.questions{
-    padding:20px 20px  20px 20px ;
-    background-color: #EFEBEA;
-    border: 1px solid red;
-      overflow: hidden;
-}
-
-
-
-
 
 .more{
   float:right;
 }
 
+/*
+padding for the user profile page.
+*/
 .userProfile{
    padding:20px 20px  20px 20px ;
     background-color: lightcyan;
@@ -94,6 +83,9 @@ padding:5px;
   text-align: center;
 }
 
+/*
+ padding for the userProfile Page
+*/
 .contentArea{
    padding:20px 20px  20px 20px ;
     background-color: lightcyan;
@@ -104,84 +96,41 @@ padding:5px;
 .contentArea h4{
   text-align: center;
 }
+
+/*
+Stylizing user icons.
+*/
 .glyphicon.glyphicon-user {
     font-size: 25px;
 }
 
-.QA{
-  padding: 20px;
-  font-size: 25px;
-}
-
-.ans{
-   padding: 10px;
-  font-size: 20px;
-}
-
-.que{
-    padding: 10px;
-  font-size: 20px;
-}
-.QAFlag{
-  padding: 20px;
-  font-size: 25px;
-}
-
-.QANoAnswer{
-    padding: 20px;
-  font-size: 25px;
-}
+/*
+stylizing submit button
+*/
 .submitButton{
   float:right;
 }
 
-.qInfo{
-  text-align: right;
-  font-size: 10pt;
-}
-.QA{
-  background-color: skyBlue;
-}
-
-.QA:hover{
-  background-color:green;
-}
-
-.QANew{
-  background-color: yellow;
-}
-
-.QANew:hover{
-  background-color: green;
-}
-
-.QANoAnswer{
-  background-color: black;
-}
-
-.QANoAnswer:hover{
-  background-color: white;
-}
-
-.QAFlag{
-  background-color: red;
-}
-
-.QAFlag:hover{
-  background-color: red;
-}
+/*
+stylizing tags in user profile page
+*/
 
 .tag{
   font-size: 10pt;
 }
 
 
-
+/*
+stylizing upvote or downvonte
+*/
 .glyphicon-flag{
 font-size: 5pt;
 }
 
 
+/*
+stylzing flags and displaying scores
+*/
 
 
 .displayScore{
@@ -205,8 +154,13 @@ padding: 5px;
   float: left;
 }
 
+/*
+end of stylizing display score
+*/
 
-
+/*
+stylizing the page to view answers with a question.
+*/
 .space4answer{
   width: auto;
   position: relative;
@@ -214,7 +168,9 @@ padding: 5px;
   
 }
 
-
+/*
+stylizing the display of the answers.
+*/
 .ansView{
   width: auto;
   height: 150px;
@@ -245,11 +201,9 @@ padding: 5px;
   width:auto;
   float: center;
 }
-.well{
-  background-color: white;
-}
-
-
+/*
+stylizing the view of the quesitons
+*/
 
 .question-display {
   display: block;
@@ -278,6 +232,8 @@ padding: 5px;
   padding: 5px;
 }
 
+/* end of styling for the questions */
+
 /* common styling for people and date/time */
 
 .person {
@@ -289,15 +245,33 @@ padding: 5px;
   color: darkgrey;
 }
 
+/* style for answering a question */
 .form-control{
 display: block;
   margin: 0 4px 12px 4px;
   padding: 16px;
 }
+/* Tis is only for user profile page */
+span.glyphicon.glyphicon-user.forProfile{
+  font-size: 250px;
+}
 
-.user{
-  text-align: left;
-  font-size: 25px;
+.uButton{
+  padding: 20px;
+  float: right;
+}
+
+.keySight{
+    color: white;
+    font-size: 2em;
+}
+
+.navbar{
+  background-color: red;
+
+}
+.color{
+  background-color: white;
 }
 
 .navbar-default{
