@@ -85,7 +85,7 @@
 
   
 <div class = "more">
-    <a href = "answers.html"> More answers </a>
+    <a href = "similarQuestions.php"> More Questions </a>
     </div>
 
 
@@ -128,7 +128,7 @@
 
 </div> 
 <div class = "more">
-    <a href = "answers.html"> More Questions </a>
+    <a href = "similarQuestions.php"> More Questions </a>
     </div>
 
   </div>
