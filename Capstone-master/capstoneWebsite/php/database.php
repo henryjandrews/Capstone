@@ -43,7 +43,7 @@ function searchForKeyword($keyword) {
 
 // This is the 'askQuestion' function that will add a new question to the DB
 function askQuestion($keyword) {
-    $keyword = formatString($keyword);
+    //$keyword = formatString($keyword);
     $db = getDbConnection();
     $stmt = $db->prepare("INSERT INTO `mydb`.`Question` (`Question_text`) VALUES (?)");
 
@@ -84,7 +84,7 @@ function getAnswers($qID) {
 }
 
 function postAnswer($qID, $aText) {
-    $aText = formatString($aText);
+    //$aText = formatString($aText);
     $db = getDbConnection();
     $stmt = $db->prepare("START TRANSACTION; INSERT INTO `mydb`.`Answer` (`Answer_Text`, `time`)
             VALUES (?, now()); 
@@ -182,6 +182,6 @@ function getRecentQuestions() {
 function formatString($sentence) {
     $toFormat = ucfirst(strtolower($sentence));
     $toFormat = preg_replace_callback('/[.!?] .*?\w/',
-        create_function('$matches', 'return strtoupper($matches[0]);'), $str);
-    return $str;
+        create_function('$matches', 'return strtoupper($matches[0]);'), $toFormat);
+    return $toFormat;
 }
