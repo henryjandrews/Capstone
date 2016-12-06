@@ -83,6 +83,7 @@ $( document ).ready(function() {
 				$.get( "php/answer-question.php", { qID:qID, aText } )
 				.done(function(data) {
 					console.log(data);
+					location.reload();
 			    	$('.question').append('<div class="alert alert-success fade in"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Your answer has been submitted!</strong></div>');
 				});
 			}

@@ -65,38 +65,16 @@
 <!-- THIS METHOD DISPLAYS RECENTLY ASKED QUESTIONS THAT I CAN ANSWER -->
   <div class="col-md-6"> 
     
-       <div class = "title">
-   <h4> Most Recent Question </h4>
-</div>
+    <div class = "title">
+   		<h4> Most Recent Question </h4>
+	</div>
     
   
-  <div box = "recentQuestions"> <!-- for appending-->
-  
-<a href="#" class="question-display">
-  <h4>What is the current interest rate for an auto loan?</h4>
-  <p class="question-info">
-      		<span class="glyphicon glyphicon-user" aria-hidden="false"></span>
-
-    <span class="person">Chris Rice</span>
-    <span class="date-time-display">12/1/2016 1:23pm</span>
-  </p>
-</a>
-<hr>
-<a href="#" class="question-display">
-  <h4>What is the current interest rate for an auto loan?</h4>
-  <p class="question-info">
-  		<span class="glyphicon glyphicon-user" aria-hidden="false"></span>
-
-    <span class="person">Chris Rice</span>
-    <span class="date-time-display">12/1/2016 1:23pm</span>
-  </p>
-</a>
-<hr>
-
-</div> 
-<div class = "more">
-    <a href = "similarQuestions.php"> More Questions </a>
-    </div>
+	<div class = "recentQuestions"> <!-- for appending-->
+	</div> 
+	<div class = "more">
+    	<a href = "similarQuestions.php"> More Questions </a>
+	</div>
 
   </div>
 
