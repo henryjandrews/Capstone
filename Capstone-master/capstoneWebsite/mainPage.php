@@ -52,7 +52,7 @@
 
   
 <div class = "more">
-    <a href = "similarQuestions.php"> More Questions </a>
+    <a href = "similarQuestions.php?type=0""> More Questions </a>
     </div>
 
 
@@ -73,7 +73,7 @@
 	<div class = "recentQuestions"> <!-- for appending-->
 	</div> 
 	<div class = "more">
-    	<a href = "similarQuestions.php"> More Questions </a>
+    	<a href = "similarQuestions.php?type=1"> More Questions </a>
 	</div>
 
   </div>

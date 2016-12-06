@@ -1,6 +1,6 @@
 $( document ).ready(function() {
-
- 	$.get( "php/get-popular-questions.php")
+	var num = 5;
+ 	$.get( "php/get-popular-questions.php", { num:num})
  	.done(function( data ) {
 		var results = jQuery.parseJSON(data);
 		console.log[results];
@@ -8,7 +8,7 @@ $( document ).ready(function() {
 			$('.popularQuestion').append('<p>There are no popular questions yet</p>');
 		}
 		else{
-			for(var i = 0; i < 5; i++){
+			for(var i = 0; i < results.length; i++){
 				var obj = results[i];
 				var question = obj["Question_text"];
 				var qID = obj["QuestionID"];
@@ -27,15 +27,15 @@ $( document ).ready(function() {
 			}
 		}
 	});
-	$.get( "php/get-recent-questions.php")
- 	.done(function( data ) {
+	$.get( "php/get-recent-questions.php", { num:num}) 
+ 	.done(function( data ){
 		var results = jQuery.parseJSON(data);
 		console.log[results];
 		if ( results.length == 0 ){
 			$('.recentQuestions').append('<p>There are no popular questions yet</p>');
 		}
 		else{
-			for(var i = 0; i < 5; i++){
+			for(var i = 0; i < results.length; i++){
 				var obj = results[i];
 				var question = obj["Question_text"];
 				var qID = obj["QuestionID"];
