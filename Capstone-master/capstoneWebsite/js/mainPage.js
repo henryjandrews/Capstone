@@ -1,6 +1,6 @@
 $( document ).ready(function() {
-	var num = 5;
- 	$.get( "php/get-popular-questions.php", { num:num})
+	
+ 	$.get( "php/get-popular-questions.php")
  	.done(function( data ) {
 		var results = jQuery.parseJSON(data);
 		console.log[results];
@@ -27,7 +27,7 @@ $( document ).ready(function() {
 			}
 		}
 	});
-	$.get( "php/get-recent-questions.php", { num:num}) 
+	$.get( "php/get-recent-questions.php") 
  	.done(function( data ){
 		var results = jQuery.parseJSON(data);
 		console.log[results];
