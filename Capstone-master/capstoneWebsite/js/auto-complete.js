@@ -4,7 +4,6 @@ $( document ).ready(function() {
 	$("#keyword").keyup(function() {
 		var keyword = $("#keyword").val();
 		if (keyword.length >= MIN_LENGTH) {
-
 			$.get( "php/auto-complete.php", { keyword: keyword } )
 			.done(function( data ) {
 				var in_list = false;
@@ -15,18 +14,16 @@ $( document ).ready(function() {
 				for(var i = 0; i < results.length; i++){
 					var obj = results[i];
 					console.log[obj];
-					$('#results').append('<div class="item" style="color:black;" qID='+obj.QuestionID+'>' + obj.Question_text+'</div>');
-				
+					$('#results').append('<div class="item" style="color:black;" qID='+obj.QuestionID+'>' + obj.Question_text+'</div>');		
 					if ($("#keyword").val() == obj["Question_text"]){
 						in_list = true;
 					}
 				}
-
 			    $('.item').click(function() {
 			    	var text = $(this).html();
 			    	qID = $(this).attr('qID');
 			    	if (text == askQuestion && in_list == false){
-			    		$.post( "php/ask-question.php", { keyword: keyword } )
+			    		$.get( "php/ask-question.php", { keyword: keyword } )
 			    		.done(function() {
 			    			$('#keyword').val("");
 			    			$('.searchBar').append('<div class="alert alert-success fade in"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Your Question has been asked!</strong></div>');

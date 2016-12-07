@@ -1,5 +1,4 @@
 <?php
-require('constant.php');
 require('database.php');
 
 if (!isset($_GET['keyword'])) {
@@ -7,4 +6,4 @@ if (!isset($_GET['keyword'])) {
 }
 
 $keyword = $_GET['keyword'];
-$data = askQuestion($keyword);
+askQuestion($keyword);
