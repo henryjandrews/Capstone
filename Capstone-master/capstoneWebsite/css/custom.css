@@ -3,25 +3,40 @@
 The results method display result in a drop down box after a user 
 enters the question
 */
+.forZ{
+ position: absolute;
+z-index: 9999;
+background-color: white;
+width: 80em;
+
+}
+
 #results {
+
+
   display: none;
 	width: auto;
 	display: absolute;
 	border: 1px solid #c0c0c0;
+ 
   
 }
 
 #results .item {
+  
 	padding: 3px;
 	font-family: Helvetica;
 	border-bottom: 1px solid #c0c0c0;
+ 
 }
 
 #results .item:last-child {
+  
 	border-bottom: 0px;
 }
 
 #results .item:hover {
+   
 	background-color: #f2f2f2;
 	cursor: pointer;
 }
@@ -44,6 +59,7 @@ These two methods change the color of navbar along with the name */
 /* padding for the searchbar */
 .searchBar{
  padding: 20px 20px;
+ position: relative;
 }
 
 /*
@@ -101,7 +117,7 @@ padding for the user profile page.
 Stylizing user icons.
 */
 .glyphicon.glyphicon-user {
-    font-size: 25px;
+    font-size: 15px;
 }
 
 /*
@@ -227,7 +243,7 @@ stylizing the view of the quesitons
   padding: 0;
 }
 
-.question-display .question-info {
+.question-display .question-info {   
   margin-bottom: 0;
   padding: 5px;
 }
