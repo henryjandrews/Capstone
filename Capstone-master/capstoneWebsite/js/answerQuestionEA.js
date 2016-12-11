@@ -33,22 +33,19 @@ $( document ).ready(function() {
         						'</div>'+
 							'</div>'+
 						'</div>'+
-						'<div class = "space4answer"><p>'+obj["Answer_text"]+'</p></div>'+
+						'<div class = "space4answer"><p>'+obj["Answer_text"]+'</p>'+
+						/* This is where the question information similar to person who asked and the time will go.
+						*/
+							'<p class="question-info">'+
+							'<span class="glyphicon glyphicon-user" aria-hidden="true"></span>'+
+							'<span class="person">Chris Rice</span>'+
+							'<span class="date-time-display">12/1/2016 1:23pm</span></p>'+
+						'</div>'+
 					'</div>'+   
 					/*
 					This is where the question information similar to person who asked the question and time will go.
 					*/
-					  '<div class = "answerInfo">'+
-          
-          			 ' <p class="question-info">'+
-					         		
-      		'<span class="glyphicon glyphicon-user" aria-hidden="true"></span>'+
-
-    		'<span class="person">Chris Rice</span>'+
-  			 ' <span class="date-time-display">12/1/2016 1:23pm</span>'+
- 			' </p>'+
-          '</div>'+
-			'<hr>'
+				'<hr>'
 				);
 			}
 		}
