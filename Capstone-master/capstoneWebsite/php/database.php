@@ -2,6 +2,7 @@
 // We will use PDO to execute database stuff. 
 // This will return the connection to the database and set the parameter
 // to tell PDO to raise errors when something bad happens
+
 function getDbConnection() {
 $servername = "keybank.cwdefzhbyz8e.us-east-1.rds.amazonaws.com:3307";
 $username = "keybank";
@@ -50,17 +51,14 @@ function askQuestion($keyword) {
     $stmt->bindParam(1, $keyword, PDO::PARAM_STR, 100);
 
     $isQueryOk = $stmt->execute();
-    
-    $results = array();
+
+    $db = null;
 
     if ($isQueryOk) {
-      $results = $stmt->fetchAll(PDO::FETCH_COLUMN);
+      return true;
     } else {
-      trigger_error('Error executing statement.', E_USER_ERROR);
+      return false;
     }
-
-    $db = null; 
-    return $results;
 }
 
 function getAnswers($qID) {
@@ -111,13 +109,13 @@ function positiveScore($aID) {
 
     $isQueryOk = $stmt->execute();
 
+    $db = null;
+
     if($isQueryOk) {
         return true;
     } else {
         return false;
     }
-
-    $db = null;
 }
 
 function negativeScore($aID) {
@@ -127,13 +125,13 @@ function negativeScore($aID) {
 
     $isQueryOk = $stmt->execute();
 
+    $db = null;
+
     if($isQueryOk) {
         return true;
     } else {
         return false;
     }
-
-    $db = null;
 }
 
 function getPopularQuestions($howMany) {
@@ -153,7 +151,6 @@ function getPopularQuestions($howMany) {
     } else {
         trigger_error('Error executing query.', E_USER_ERROR);
     }
-
 
     $db = null;
     return $results;
@@ -175,7 +172,6 @@ function getRecentQuestions($howMany) {
     } else {
         trigger_error('Error executing query.', E_USER_ERROR);
     }
-
 
     $db = null;
     return $results;
