@@ -3,17 +3,14 @@
 The results method display result in a drop down box after a user 
 enters the question
 */
-.forZ{
+
+
+#results {
+
  position: absolute;
 z-index: 9999;
 background-color: white;
 width: 80em;
-
-}
-
-#results {
-
-
   display: none;
 	width: auto;
 	display: absolute;
@@ -44,15 +41,6 @@ width: 80em;
 /*
 These two methods change the color of navbar along with the name */
 
-.keySight{
-    color: red;
-    font-size: 2em;
-}
-
-.navbar{
-  background-color: red;
-
-}
 
 
 
@@ -166,8 +154,9 @@ padding: 5px;
 
 .forVoting{
   width:30px;
-  height: 60px;
   float: left;
+  height: 5cm;
+  
 }
 
 /*
@@ -177,35 +166,31 @@ end of stylizing display score
 /*
 stylizing the page to view answers with a question.
 */
-.space4answer{
-  width: auto;
-  position: relative;
-  top: 30px;
-  
-}
 
 /*
 stylizing the display of the answers.
 */
+
+
 .ansView{
-  width: auto;
-  height: 150px;
+ 
+   height: auto;
   display: block;
   margin: 0 4px 12px 4px;
   padding: 16px;
-  border: 1px solid rgba(0,0,0,0.0);
+  border: 1px solid lightblue;
   background-color: rgba(0,0,0,0.02);
   text-decoration: none;
   color: black;
   text-align: left;
+  
 
 }
 
-.ansView:hover{
-   border: 1px solid rgba(0,0,0,0.1);
-  background-color: rgba(0,0,0,0.07);
-
+.forAnswers{
+  height: auto;
 }
+
 
 .nameoftheQuestion{
   padding: 5px;
@@ -277,6 +262,9 @@ span.glyphicon.glyphicon-user.forProfile{
   float: right;
 }
 
+/*
+overriding the defautl navigation bar setting of bootstrap
+*/
 .keySight{
     color: white;
     font-size: 2em;
@@ -292,4 +280,11 @@ span.glyphicon.glyphicon-user.forProfile{
 
 .navbar-default{
   background-color: red;
+}
+
+/*
+Styling how the headig for the asking a  user for answer looks
+*/
+.enterAnswer{
+  font-size: 20px;
 }
