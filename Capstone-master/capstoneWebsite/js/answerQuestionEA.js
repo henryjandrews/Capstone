@@ -13,7 +13,7 @@ $( document ).ready(function() {
 			for(var i = 0; i < results.length; i++){
 				var obj = results[i];
 				$('.forAnswers').append(
-					'<div class = "ansView">'+
+					'<div class = "ansView col-md-12 col-sm-12 col-xs-12">'+
 						'<div class = "col-xs-2 flag">'+
 							'<div class = "forVoting">'+
        							'<div class = "thumb" AnswerID = '+obj["AnswerID"]+' pos = 1 >'+
@@ -33,19 +33,19 @@ $( document ).ready(function() {
         						'</div>'+
 							'</div>'+
 						'</div>'+
-						'<div class = "space4answer"><p>'+obj["Answer_text"]+'</p>'+
+						'<div class = "space4answer col-sm-10 col-md-10"><p>'+obj["Answer_text"]+'</p>'+
 						/* This is where the question information similar to person who asked and the time will go.
 						*/
-							'<p class="question-info">'+
+							'<p class="answer-info">'+
 							'<span class="glyphicon glyphicon-user" aria-hidden="true"></span>'+
 							'<span class="person">Chris Rice</span>'+
 							'<span class="date-time-display">12/1/2016 1:23pm</span></p>'+
 						'</div>'+
-					'</div>'+   
+					'</div>' 
 					/*
 					This is where the question information similar to person who asked the question and time will go.
 					*/
-				'<hr>'
+				
 				);
 			}
 		}
