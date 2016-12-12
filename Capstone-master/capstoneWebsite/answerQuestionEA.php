@@ -50,12 +50,13 @@
 </div>
 
 <!-- This is where a input an answer for already answered or non-answerd question -->
+<div class = "container">
 <div class = "answerBox">
 
   <div class = "col-sm-md-8">
 
-<div class="form-group">
-  <label for="Answer">Add a new  and improved answer:</label>
+<div class="form-group enterAnswer">
+  <label for="Answer">Your Answer:</label>
 
   <!-- Text area for enter the question -->
   <textarea class="form-control" rows="10" id="Anaswer"></textarea>
@@ -67,9 +68,9 @@
 
 <!-- Submitting the answer -->
 <div class =  "submitButton">
-     <input type="submit" class="btn btn-info" value="Your Answer">
+     <input type="submit" class="btn btn-info" value="Please Submit Your Answer">
 </div>
-
+</div>
 
 
     <!-- End of serachbar -------->
