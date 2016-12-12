@@ -171,15 +171,13 @@ stylizing the page to view answers with a question.
 stylizing the display of the answers.
 */
 
-
 .ansView{
- 
    height: auto;
   display: block;
   margin: 0 4px 12px 4px;
   padding: 16px;
-  border: 1px solid lightblue;
-  background-color: rgba(0,0,0,0.02);
+  border: rgba(0,0,0,0.05);
+  background-color: rgba(0,0,0,0.04);
   text-decoration: none;
   color: black;
   text-align: left;
@@ -287,4 +285,10 @@ Styling how the headig for the asking a  user for answer looks
 */
 .enterAnswer{
   font-size: 20px;
+}
+
+
+
+body {
+    padding-bottom: 50px;
 }
