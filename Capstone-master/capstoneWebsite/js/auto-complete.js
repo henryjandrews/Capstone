@@ -27,6 +27,7 @@ $( document ).ready(function() {
 			    		.done(function() {
 			    			$('#keyword').val("");
 			    			$('.searchBar').append('<div class="alert alert-success fade in"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Your Question has been asked!</strong></div>');
+			    			location.reload();
 			    		});
 			    	}
 			    	else {

@@ -7,7 +7,12 @@ $( document ).ready(function() {
 		var results = jQuery.parseJSON(data);
 		console.log[results];
 		if ( results.length == 0 ){
-			$('.forAnswers').append('<p>There are no answers for this question yet</p>');
+			$('.forAnswers').append(
+				'<div class = "ansView col-md-12 col-sm-12 col-xs-12">'+
+					'<div class = "space4answer col-sm-10 col-md-10">'+
+						'<p>There are no answers for this question yet</p>'+
+					'</div>'+
+				'</div>');
 		}
 		else{
 			for(var i = 0; i < results.length; i++){
