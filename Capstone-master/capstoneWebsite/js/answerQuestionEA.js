@@ -44,7 +44,7 @@ $( document ).ready(function() {
 							'<p class="answer-info">'+
 							'<span class="glyphicon glyphicon-user" aria-hidden="true"></span>'+
 							'<span class="person">Chris Rice</span>'+
-							'<span class="date-time-display">12/1/2016 1:23pm</span></p>'+
+							'<span class="date-time-display">'+obj["time"]+'</span></p>'+
 						'</div>'+
 					'</div>' 
 					/*
