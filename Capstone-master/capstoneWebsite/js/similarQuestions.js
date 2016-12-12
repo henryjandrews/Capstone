@@ -35,7 +35,7 @@ $( document ).ready(function() {
 	 	.done(function( data ){
 			var results = jQuery.parseJSON(data);
 			console.log[results];
-			$('.title').append('<h4> Most Popular Question </h4>');
+			$('.title').append('<h4> Most Recent Question </h4>');
 			if ( results.length == 0 ){
 				$('.recentQuestions').append('<p>There are no popular questions yet</p>');
 			}
