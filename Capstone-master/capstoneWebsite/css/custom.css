@@ -171,6 +171,9 @@ stylizing the page to view answers with a question.
 stylizing the display of the answers.
 */
 
+/*
+Stylizing the answer box
+*/
 .ansView{
    height: auto;
   display: block;
@@ -215,6 +218,9 @@ stylizing the view of the quesitons
   text-align: left;
 }
 
+/*
+changing color when hoveirg over the quesiton box
+*/
 .question-display:hover {
   border: 1px solid rgba(0,0,0,0.1);
   background-color: rgba(0,0,0,0.07);
@@ -250,7 +256,7 @@ display: block;
   margin: 0 4px 12px 4px;
   padding: 16px;
 }
-/* Tis is only for user profile page */
+/* This is only for user profile page */
 span.glyphicon.glyphicon-user.forProfile{
   font-size: 250px;
 }
@@ -288,6 +294,9 @@ Styling how the headig for the asking a  user for answer looks
 }
 
 
+/*
+adding space at the end of the page
+*/
 
 body {
     padding-bottom: 50px;
