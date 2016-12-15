@@ -1,4 +1,7 @@
 <?php
+// function call for the upvote button, uses post/get for the
+// answer id
+
 require('database.php');
 
 if (!isset($_GET['aID'])) {

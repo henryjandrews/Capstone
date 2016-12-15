@@ -1,4 +1,7 @@
 <?php
+// connects javascript to php, used post/get to send a keyword
+// in order to populate the dropdown menu when asking a question
+
 require('database.php');
 
 if (!isset($_GET['keyword'])) {
