@@ -1,0 +1,39 @@
+###### INSTRUCTIONS ######
+
+Technology Used:
+	- PHP 7.0.9*, with PDO enabled in php.ini
+	- MySQL Server 5.7**
+	- Node.JS
+	- HTML5
+	- Bootstrap
+* PHP 5.5.X works as well
+** importing the database file on an older version of MySQL will not work
+
+Suggestions:
+	- We suggest the use of MAMP Free Version (https://www.mamp.info/en/) to setup and launch the project php server
+	- MySQL Server 5.7 and MySQL workbench (https://dev.mysql.com/downloads/workbench/) to edit database schema and launch the database server
+
+Instructions for MAMP to view site:
+	- Once downloaded, default save location should be in the C:\ drive.
+	- Copy Capstone folder once unzipped and paste it into C:\MAMP\htdocs
+	- Once database is setup and Capstone folder is placed in htdocs, run MAMP
+	- Hit 'Preferences' 
+	- On the 'Ports' tab, select an open port for apache to run the php server
+	- On the 'PHP' tab, select your version of PHP
+	- On the 'WebServer' tab, select Apache
+	- Hit 'ok' and 'Start Servers' (if servers aren't running, you can see the status in the top right)
+	- Click on 'Open start page'
+	- Once the start page opens, in the navigation bar you can navigate through the file system by changing:
+		http://localhost:81/MAMP/
+		to: http://localhost:81/capstone/Capstone-master/capstoneWebsite/mainPage.php
+
+Instructions for MySQL:
+	- Navigate into the capstone folder and retreive the database file, this should be saved in C:\MAMP\htdocs\Capstone\Capstone-master\capstoneWebsite\db
+	- The database file is named 'KeySight'
+	- In order for the project to connect to the database, database.php must be configured to run with your system parameters, 
+		necessary information is detailed within database.php (C:\MAMP\htdocs\Capstone\Capstone-master\capstoneWebsite\php\)
+	- With MySQL Server and Workbench downloaded open workbench and create a new localhost connection following the instructions here (https://dev.mysql.com/doc/workbench/en/wb-mysql-connections-new.html)
+	- Open the localhost server connection and once connected click on the 'File' drop down in the top left of the screen.
+	- Choose 'Run SQL Script' and choose KeySight.sql
+	- Ensure that table and column names kept their case scheme and are consistent with database.php query calls (ran into a few errors when importing/exporting)*
+* might involve renaming tables (for example 'answer' -> 'Answer')
